@@ -1,0 +1,27 @@
+{
+
+"firstname" : 100
+"middlename": null,
+"company" :"soprasteria",
+
+"books":[
+
+{  
+"name": "abc",
+"language": "java",
+"edition": "first"
+},
+
+{ 
+"name": "xyz",
+"language": "CPP",
+"edition": "second"
+
+}
+
+]
+
+
+}
+
+
