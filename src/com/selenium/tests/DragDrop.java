@@ -9,9 +9,45 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
 public class DragDrop {
+	
+	
+	
+	
+	public void loginApp(int a, int b) {
+		
+		System.out.println(a+b);
+		
+	}
+
+
+	public void clickElement(WebDriver driver, By locator) {
+		try {
+			if(driver.findElement(locator).isDisplayed()) {
+				//hilighelemnt
+				driver.findElement(locator).click();
+				//log on the report 
+			}
+		}
+		catch(Exception e) {
+			
+			System.out.println(e.toString());
+		}
+	}
+
+	public void enterText(WebDriver driver, By locator, String textToBeentred) {
+
+		
+		driver.findElement(locator).sendKeys(textToBeentred);
+
+	}
+	
+	
+	
+	
+	
 
 	public static void main(String[] args) throws InterruptedException {
-		
+
 		System.setProperty("webdriver.chrome.driver", "ChromeDriver//chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -37,12 +73,12 @@ public class DragDrop {
 
 		//Verification if tooltip text is matching expected value
 		if(toolTipText.equalsIgnoreCase("We ask for your age only for statistical purposes.")){
-		System.out.println("Pass");
+			System.out.println("Pass");
 		}else{
-		System.out.println("Fail");
-		
+			System.out.println("Fail");
+
 		}
-		
+
 	}
 
 }
